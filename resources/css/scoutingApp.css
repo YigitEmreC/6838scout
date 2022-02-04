@@ -44,17 +44,6 @@ html, body{
     display: table;
 }
 
-#auton{
-}
-
-#teleop{
-}
-
-#endgame{
-}
-
-#postmatch{
-}
 
 #qr-code{
   text-align: center;
@@ -90,6 +79,13 @@ h2{
 
 .half-button-container{
     display: flex;
+}
+
+h6 {
+	font-family: Alexis;
+    text-align: center;
+    color: #ffffff;
+	font-size: 66px;
 }
 
 h1 .odd {
@@ -131,4 +127,206 @@ input {
     text-align: center;
     color: black;
     background-color: rgb(0, 31, 7);
+}
+/* paint css */
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.paint {
+  padding-top: 2px;
+}
+
+/* CANVAS STYLING
+===================*/
+
+canvas {
+	background: #FFF;
+	display: block;
+	margin: 40px auto 10px;
+	border-radius: 5px;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-top: 1px solid #E0E0E0;
+	box-shadow: 0 4px 0 0 #E0E0E0;
+	cursor: url(../img/cursor.png), crosshair;
+}
+
+/* CONTROLS (NEW COLOURS)
+=======================*/
+
+.controls {
+	min-height: 60px;
+	margin: 0 auto;
+	width: 600px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+ul {
+	list-style:none;
+	margin: 0;
+	float: 	left;
+	padding: 10px 0 20px;
+	width: 100%;
+	text-align: center;
+}
+
+ul li, #newColor {
+	display:block;
+	height: 54px;
+	width: 54px;
+	border-radius: 60px;
+	cursor: pointer;
+	border: 0;
+	box-shadow: 0 3px 0 0 #E0E0E0;
+}
+
+ul li {
+	display: inline-block;
+	margin: 0 5px 10px;
+}
+
+.red {
+	background: #E74C3C;
+}
+
+.blue {
+	background: #3498DB;
+}
+
+.yellow {
+	background: #F1C40F;
+}
+
+.selected {
+	border: 7px solid #68B25B;
+	width: 40px;
+	height: 40px;
+}
+
+/* BUTTON STYLES
+==============*/
+
+#revealColorSelect {
+	border: none;
+	border-radius: 5px;
+	margin: 10px auto;
+	padding: 5px 20px;
+	width: 160px;
+}
+#clear {
+	border: none;
+	border-radius: 5px;
+	margin: 10px auto;
+	padding: 0 20px;
+	width: 160px;
+	height: 40px;
+}
+
+/* New Color Palette
+==================*/
+
+#colorSelect {
+	background: #fff;
+	border-radius: 5px;
+	clear: both;
+	margin: 20px auto 0;
+	padding: 10px;
+	width: 305px;
+	position: relative;	
+	display:none;
+	border-top: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+}
+#colorSelect:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+#newColor {
+	width: 80px;
+	height: 80px;
+	border-radius: 3px;
+	box-shadow: none;
+	float: left;
+	border: none;
+	margin: 10px 20px 20px 10px;
+}
+.sliders p {
+	margin: 8px 0;
+	vertical-align: middle;
+}
+.sliders label {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width: 35px;
+	font-size: 14px;
+	color: #6D574E;
+}
+.sliders input {
+	position: relative;
+	top: 2px;
+}
+#colorSelect button {
+	border: none;
+	border-top: 1px solid #6A845F;
+	border-radius: 0 0 5px 5px;
+	clear: both;
+	margin: 10px -10px -7px;
+	padding: 5px 10px;
+	width: 325px;
+}
+
+/* Main Menu CSS */
+
+.menubutton {
+	
+ 
+		background-color:#ffffff;
+		 
+		border: #2e6da4;
+		 
+		font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+		 
+		font-size: 15px;
+		 
+		color: rgb(0, 0, 0);
+		 
+		letter-spacing: 1px;
+		 
+		padding: 8px 12px;
+		 
+		font-size: 14px;
+		 
+		font-weight: normal;
+		 
+		margin-bottom: 10px;
+
+		margin-top: 50px;
+
+		margin-left: 25px;
+
+		margin-right: 25px;
+		 
+		border-radius: 4px;
+		 
+		line-height: 1.5;
+		 
+		text-decoration:none
+		 
 }

@@ -1,7 +1,7 @@
 var config_data = `
 {
   "title":"Scouting App 2022",
-  "page_title":"Rapid React 2022",
+  "page_title":"Rapid React",
   "elements":{
     "prematch": {
       "Scouter's Initials": {
@@ -51,7 +51,7 @@ var config_data = `
         },
         "required":"true"
       },
-      "Team Tag#": {
+      "Team Tag #": {
         "code":"t",
         "type":"team",
         "min":1,
@@ -61,7 +61,7 @@ var config_data = `
         "code":"as",
         "title": "Auto Start Position",
         "type":"field_image",
-        "filename":"2022/field_image.png"
+        "filename":"resources/img/field_image.png"
       }
     },
     "auton": {
