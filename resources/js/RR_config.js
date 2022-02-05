@@ -1,7 +1,7 @@
 var config_data = `
 {
-  "title":"Scouting App 2022",
-  "page_title":"Rapid React",
+  "title":"Scouting App 6838",
+  "page_title":"Rapid React 6838",
   "elements":{
     "prematch": {
       "Scouter's Initials": {
