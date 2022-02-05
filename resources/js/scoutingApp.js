@@ -454,7 +454,7 @@ function validateLevel() {
 
 function validateData() {
 	var ret = true
-	var errStr = "Bad fields: ";
+	var errStr = "Empty fields: ";
 	for (rf of requiredFields) {
 		// Robot requires special (radio) validation
 		if (rf == "r") {

@@ -14,7 +14,7 @@ var config_data = `
       "Event":{
         "code":"e",
         "type":"event",
-        "defaultValue":"Not given",
+        "defaultValue":"2022 Izmir Regional",
         "required":"true",
         "disabled":"true"
       },

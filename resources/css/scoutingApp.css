@@ -88,17 +88,6 @@ h6 {
 	font-size: 66px;
 }
 
-h1 .odd {
-    font-family: Alexis;
-    text-align: center;
-    color: #ffffff;
-}
-
-h1 .even {
-    font-family: Alexis;
-    text-align: center;
-    color: #ff00d4;
-}
 
 table {
     border: 1px solid black;
@@ -110,8 +99,31 @@ td {
 }
 
 input {
-    font-size: 16px;
+    background-color:#ffffff;
+	 
+	border: #2e6da4;
+	 
+	font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+	 
+	font-size: 12px;
+	 
+	color: rgb(0, 31, 7);
+	 
+	letter-spacing: 1px;
+	 
+	padding: 5px 12px;
+	 
+	font-size: 14px;
+	 
+	font-weight: normal;
+	 
+	border-radius: 4px;
+	 
+	line-height: 1;
+	 
+	text-decoration:none
 }
+
 
 .title {
     width: "50%";
@@ -125,8 +137,8 @@ input {
 
 #qr-table {
     text-align: center;
-    color: black;
-    background-color: rgb(0, 31, 7);
+    color: #193125 ;
+    background-color: #193125;
 }
 /* paint css */
 
@@ -145,15 +157,15 @@ input {
 ===================*/
 
 canvas {
-	background: #FFF;
+	background-image: url("https://library.automationdirect.com/wp-content/uploads/2022/01/image-18.png");
+	background-position: center;
+
 	display: block;
-	margin: 40px auto 10px;
+	background-repeat:no-repeat;
+	margin: 60px auto 10px;
 	border-radius: 5px;
-	border-left: 1px solid #E0E0E0;
-	border-right: 1px solid #E0E0E0;
-	border-top: 1px solid #E0E0E0;
-	box-shadow: 0 4px 0 0 #E0E0E0;
-	cursor: url(../img/cursor.png), crosshair;
+	
+	
 }
 
 /* CONTROLS (NEW COLOURS)
@@ -217,6 +229,7 @@ ul li {
 	margin: 10px auto;
 	padding: 5px 20px;
 	width: 160px;
+	height: 40px;
 }
 #clear {
 	border: none;
@@ -329,4 +342,41 @@ ul li {
 		 
 		text-decoration:none
 		 
+}
+
+.movingbutton {
+	
+ 
+	background-color:#ffffff;
+	 
+	border: #2e6da4;
+	 
+	font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+	 
+	font-size: 15px;
+	 
+	color: rgb(0, 0, 0);
+	 
+	letter-spacing: 1px;
+	 
+	padding: 8px 12px;
+	 
+	font-size: 14px;
+	 
+	font-weight: normal;
+	 
+	margin-bottom: 8px;
+
+	margin-top: 20px;
+
+	margin-left: 5px;
+
+	margin-right: 5px;
+	 
+	border-radius: 4px;
+	 
+	line-height: 1.5;
+	 
+	text-decoration:none
+	 
 }

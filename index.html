@@ -14,88 +14,61 @@
 		<form id="scoutingForm" onsubmit="return false">
 			<div id="main-panel-holder" > 
 				<div id="prematch" class="main-panel" style="background-color: #4b4b4b75;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">N</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Pre-Match Information</h2>
-					<p class="match-label"><input type="button" value="Next" onclick="swipePage(1)"> <input type="button" value="Main Menu" onclick="swipePage(7)"></p>
+					<p class="match-label"><input type="button" button class="movingbutton" value="Next" onclick="swipePage(1)"> <input type="button" button class="movingbutton" value="Main Menu" onclick="swipePage(7)"></p>
 					<table id="prematch_table">
 					<!-- ###PRE-MATCH-COMPONENTS###-->
 					</table>
 				</div>
 
 				<div id="auton" class="main-panel" style="background-color: #193125;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Autonomous</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"> <input type="button" value="Next" onclick="swipePage(1)"></p>
+					<p class="match-label"><input type="button" button class="movingbutton"  value="Prev" onclick="swipePage(-1)"> <input type="button" button class="movingbutton" value="Next" onclick="swipePage(1)"></p>
 					<table id="auton_table">
 					<!-- ###AUTON-COMPONENTS###-->
 					</table>
 				</div>
 
 				<div id="teleop" class="main-panel" style="background-color: #4b4b4b75;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Manual Control</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"><input type="button" value="Next" onclick="swipePage(1)"></p>
+					<p class="match-label"><input type="button" button class="movingbutton" value="Prev" onclick="swipePage(-1)"><input type="button" button class="movingbutton" value="Next" onclick="swipePage(1)"></p>
 					<table id="teleop_table">
 						<!-- ###TELEOP-COMPONENTS###-->
 					</table>
 				</div>
 
 				<div id="endgame" class="main-panel" style="background-color: #193125;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Endgame Information</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"><input type="button" value="Next" onclick="swipePage(1)"></p>
+					<p class="match-label"><input type="button" button class="movingbutton" value="Prev" onclick="swipePage(-1)"><input type="button" button class="movingbutton" value="Next" onclick="swipePage(1)"></p>
 					<table id="endgame_table">
 						<!-- ###ENDGAME-COMPONENTS###-->
 					</table>
 				</div>
 
 				<div id="post-match" class="main-panel" style="background-color: #4b4b4b75;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Miscellaneous</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"><input type="button" value="Next" onclick="swipePage(1)"></p>
+					<p class="match-label"><input type="button" button class="movingbutton" value="Prev" onclick="swipePage(-1)"><input type="button" button class="movingbutton" value="Next" onclick="swipePage(2)"></p>
 					<table id="postmatch_table">
 						<!-- ###POST-MATCH-COMPONENTS###-->
 					</table>
 				</div>
 
-				<div id="qr-code" class="main-panel">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
-					<h2>Generate Form's QR Code</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"> <input type="button" value="Next" onclick="swipePage(1)"></p>      </p> 
-					<p id="qr-info"><span id="display_qr-info" style="border: none; text-align: center;"></span></p>
-					<table id="qr-table"><tr><td width="5%">&nbsp;</td><td width="90%">
-						<h6>QR Code</h6>
-						<div id="qrcode" style="text-align:center">
-							
-							<script>
-						// Create QRCode Object
-								qr = new QRCode(document.getElementById("qrcode"), options)
-							
 
 
-					</script>
-					</div>
 
-					
-
-
-				</td><td width="5%">&nbsp;</td></tr></table>
-					<p></p>
-					<div id="clearButton">
-						<button type="button" onclick="clearForm()">Reset the Form</button>
-					</div>
-					<br>
-				</div>
-
-			
 				<div id="sketch" class="main-panel" style="background-color: #4b4b4b75;">
-					<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+					<h1 class="page_title"><br>Scouting 2022</h1>
 					<h2>Sketch</h2>
-					<p class="match-label"><input type="button" value="Prev" onclick="swipePage(-1)"> <input type="button" value="Main Menu" onclick="swipePage(1)">
+					<p class="match-label"><input type="button" button class="movingbutton" value="Prev" onclick="swipePage(-1)"> <input type="button" button class="movingbutton" value="Main Menu" onclick="swipePage(2)">
 
 					
 					<!-- Sketch'i buraya yazıyorum-->
-
+					
 					<canvas	width="1000" height="350" id="mainCanvas"></canvas>
 					<div class="controls">
 						<ul>
@@ -129,12 +102,59 @@
 					<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 					<script src="resources/js/evet.js" type="text/javascript" charset="utf-8"></script>
 
+				</div>
+
+
+
+			>
+
+
+
+
+
+
+
+				<!-- sketch bozuk olduğu için qr code ile sayfa numaralarını değiştim -->
+
+
+				<div id="qr-code" class="main-panel" style="background-color: #4b4b4b75;">
+					<h1 class="page_title"><br>Scouting 2022</h1>
+					<h2>Generate Form's QR Code</h2>
+					<p class="match-label"><input type="button" button class="movingbutton"  value="Prev" onclick="swipePage(-2)"> <input type="button" button class="movingbutton" value="Main Menu" onclick="swipePage(1)"></p>      </p> 
+					<p id="qr-info"><span id="display_qr-info" style="border: none; text-align: center;"></span></p>
+					<table id="qr-table" style="text-align:center"><tr><td width="5%">&nbsp;</td><td width="90%" >
+						<h6>QR Code</h6>
+						<div id="qrcode" style="text-align:center">
+							
+							<script>
+						// Create QRCode Object
+								qr = new QRCode(document.getElementById("qrcode"), options)
+							
+
+					
+					</script>
+					</div>
+
 					</table>
 
 
-
+					</td><td width="5%">&nbsp;</td></tr> 
+					<p></p>
+					<div id="clearButton">
+						<button type="button" button class="movingbutton"  onclick="clearForm()">Reset the Form</button>
+					</div>
+					<br>
 
 				</div>
+
+			
+
+			
+				
+
+
+
+				
 
 
 
@@ -143,10 +163,10 @@
 			<!-- Ronaldo Menu -->
 			
 			<div id="menu" class="main-panel" style="background-color: #193125;">
-				<h1 class="page_title"><span class="odd">P</span><span class="even">W</span><span class="odd">n</span><span class="even">A</span><span class="odd">G</span><span class="even">E</span><br>Scouting 2022</h1>
+				<h1 class="page_title"><br>Scouting 2022</h1>
 				<h2>Main Menu</h2>
 				<p class="match-label"><input type="button" button class="menubutton" value="Scouting Form" onclick="swipePage(-7)">
-				<p class="match-label"><input type="button" button class="menubutton" value="Sketch" onclick="swipePage(-1)">
+				<p class="match-label"><input type="button" button class="menubutton" value="Sketch" onclick="swipePage(-2)">
 				<a href="https://www.instagram.com/xsharc6838/" class="menubutton">Instagram</a>
 
 
