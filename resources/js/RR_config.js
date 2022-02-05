@@ -128,7 +128,7 @@ var config_data = `
         "code":"ss",
         "title": "Shooting Spot",
         "type":"field_image",
-        "filename":"2022/field_image.png"
+        "filename":"resources/img/field_image.png"
       }
     },
     "endgame": {
