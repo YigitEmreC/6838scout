@@ -1,7 +1,7 @@
 var config_data = `
 {
-  "title":"Scouting App 6838",
-  "page_title":"Rapid React 6838",
+  "title":"Scouting App",
+  "page_title":"Rapid React",
   "elements":{
     "prematch": {
       "Scouter's Initials": {
@@ -42,12 +42,12 @@ var config_data = `
         "code":"r",
         "type":"robot",
         "choices":{
-          "r1":"Red-1",
-          "b1":"Blue-1<br>",
-          "r2":"Red-2",
-          "b2":"Blue-2<br>",
-          "r3":"Red-3",
-          "b3":"Blue-3"
+          "r1":"  Red-1",
+          "b1":"  Blue-1<br>",
+          "r2":"  Red-2",
+          "b2":"  Blue-2<br>",
+          "r3":"  Red-3",
+          "b3":"  Blue-3"
         },
         "required":"true"
       },
