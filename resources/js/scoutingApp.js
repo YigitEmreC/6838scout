@@ -625,7 +625,6 @@ function moveTouch(e) {
 
 	var currentX = e.changedTouches[0].screenX;
 	var diffX = initialX - currentX;
-
 	initialX = null;
 };
 
