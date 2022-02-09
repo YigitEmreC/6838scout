@@ -630,6 +630,7 @@ function moveTouch(e) {
 	if (diffX/screen.width > xThreshold) {
 		// swiped left
 		swipePage(0);
+		
 	} else if(diffX/screen.width < -xThreshold) {
 		// swiped right
   	swipePage(0);
