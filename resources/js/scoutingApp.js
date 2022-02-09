@@ -625,6 +625,15 @@ function moveTouch(e) {
 
 	var currentX = e.changedTouches[0].screenX;
 	var diffX = initialX - currentX;
+
+  // sliding horizontally
+	if (diffX/screen.width > xThreshold) {
+		// swiped left
+		swipePage(0);
+	} else if(diffX/screen.width < -xThreshold) {
+		// swiped right
+  	swipePage(0);
+	}
 	initialX = null;
 };
 
@@ -802,22 +811,3 @@ window.onload = function(){
 	getSchedule(ec);
 	this.drawFields();
 };
-
-var xPos = null;
-var yPos = null;
-window.addEventListener( "touchmove", function ( event ) {
-    var touch = event.originalEvent.touches[ 0 ];
-    oldX = xPos;
-    oldY = yPos;
-    xPos = touch.pageX;
-    yPos = touch.pageY;
-    if ( oldX == null && oldY == null ) {
-        return false;
-    }
-    else {
-        if ( Math.abs( oldX-xPos ) > Math.abs( oldY-yPos ) ) {
-            event.preventDefault();
-            return false;
-        }
-    }
-} );
