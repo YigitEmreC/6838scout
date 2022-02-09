@@ -49,17 +49,6 @@ $("#addNewColor").click(function () {
 
 // On mouse events on the canvas
 $canvas.mousedown(function (e) {
-    canvas.addEventListener("mousedown", startPosition);
-  canvas.addEventListener("touchstart", startPosition);
-  canvas.addEventListener("mouseup", endPosition);
-  canvas.addEventListener("touchend", endPosition);
-  canvas.addEventListener("mousemove", draw);
-  canvas.addEventListener("touchmove", function (e) {
-  var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousemove", {
-    clientX: touch.clientX,
-    clientY: touch.clientY
-
     lastEvent = e;
     mouseDown = true;
 }).mousemove(function (e) {
