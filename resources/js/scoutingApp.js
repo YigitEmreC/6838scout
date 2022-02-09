@@ -633,7 +633,7 @@ function moveTouch(e) {
 		
 	} else if(diffX/screen.width < -xThreshold) {
 		// swiped right
-  	swipePage(0);
+  	swipePage(6);
 	}
 	initialX = null;
 };
