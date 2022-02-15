@@ -137,12 +137,12 @@ var config_data = `
         "title": "Climb",
         "type":"radio",
         "choices":{
-          "1":"Low (4p)<br>",
-          "2":"Mid (6p)<br>",
-          "3":"High (10p)<br>",
-          "4":"Traversal (15p)<br>",
-          "f":"Attempted but Failed<br>",
-          "x":"Not Attempted"
+          "1":"ㅤLowㅤ(4p)<br>",
+          "2":"ㅤMidㅤ(6p)<br>",
+          "3":"ㅤHighㅤ(10p)<br>",
+          "4":"ㅤTraversalㅤ(15p)<br>",
+          "f":"ㅤAttempted but Failed<br>",
+          "x":"ㅤNot Attempted"
         },
         "defaultValue":"x"
       },
