@@ -383,6 +383,22 @@ ul li {
 	 
 }
 
+input[type='radio']:after {
+	
+	margin: 0 10;
+	transform: translate3d(0, 0, 0);
+	z-index: 50;
+	display: block;
+ }
+
+input[type='radio'] {
+	
+	margin: 0 10;
+	transform: translate3d(0, 0, 0);
+	z-index: 50;
+	display: block;
+ }
+
 input[type=checkbox] {
          position: relative;
 	       cursor: pointer;
