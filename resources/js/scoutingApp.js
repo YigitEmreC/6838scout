@@ -265,7 +265,7 @@ function addCheckbox(table, idx, name, data){
   cell2.appendChild(inp);
 
   if (data.type == 'bool') {
-    cell2.innerHTML += "(‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ (‎Checked → Yes)";
+    cell2.innerHTML += "‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ (‎Checked → Yes)";
   }
 
   return idx+1;

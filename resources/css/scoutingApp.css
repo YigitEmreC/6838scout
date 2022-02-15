@@ -440,3 +440,28 @@ input[type='radio']:checked:after {
 	visibility: visible;
 	border: 2px solid white;
 } */
+
+.imageFieldDoc {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	width: 512px;
+	height: 271px;
+  }
+
+  .docsquestions {
+	  margin-top: 60px;
+	  margin-bottom: 10px;
+	  text-align:center;
+	  font-size: 16;
+	  font-weight: bolder;
+  }
+
+  .docsanswers {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align:center;
+	font-size: 16;
+	font-weight: normal;
+}
