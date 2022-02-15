@@ -383,8 +383,7 @@ ul li {
 	 
 }
 
-
-input[type=checkbox] {
+/* input[type=checkbox] {
          position: relative;
 	       cursor: pointer;
     }
@@ -440,4 +439,4 @@ input[type='radio']:checked:after {
 	display: inline-block;
 	visibility: visible;
 	border: 2px solid white;
-}
+} */
