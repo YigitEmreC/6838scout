@@ -1,5 +1,5 @@
-document.addEventListener("touchstart", startTouch, false);
-document.addEventListener("touchend", moveTouch, false);
+document.addEventListener("touchstart", startTouch, true);
+document.addEventListener("touchend", moveTouch, true);
 
 // Swipe Up / Down / Left / Right
 var initialX = null;
@@ -57,57 +57,69 @@ function addCounter(table, idx, name, data){
 }
 
 function addFieldImage(table, idx, name, data) {
-  var row = table.insertRow(idx);
-  idx += 1
-  var cell = row.insertCell(0);
-  cell.setAttribute("colspan", 2);
-  cell.setAttribute("style", "text-align: center;");
-  cell.innerHTML = name;
-
-  row = table.insertRow(idx);
-  idx += 1;
-  cell = row.insertCell(0);
-  cell.setAttribute("colspan", 2);
-  cell.setAttribute("style", "text-align: center;");
-  var canvas = document.createElement('canvas');
-  //canvas.onclick = onFieldClick;
-  canvas.setAttribute("onclick", "onFieldClick(event)");
-  canvas.setAttribute("class", "field-image-src");
-  canvas.setAttribute("id", "canvas_"+data.code);
-  canvas.innerHTML = "No canvas support";
-  cell.appendChild(canvas);
-
-  row = table.insertRow(idx);
-  idx += 1
-  row.setAttribute("style", "display:none");
-  cell = row.insertCell(0);
-  cell.setAttribute("colspan", 2);
-  var inp = document.createElement('input');
-  inp.setAttribute("type", "hidden");
-  inp.setAttribute("id", "XY_"+data.code);
-  inp.setAttribute("value", "");
-  cell.appendChild(inp);
-  inp = document.createElement('input');
-  inp.setAttribute("hidden", "");
-  inp.setAttribute("id", "input_"+data.code);
-  inp.setAttribute("value", "");
-  cell.appendChild(inp);
-
-  row = table.insertRow(idx);
-  row.setAttribute("style", "display:none");
-  idx += 1
-  //row.setAttribute("style", "display:none");
-  cell = row.insertCell(0);
-  cell.setAttribute("colspan", 2);
-  var img = document.createElement('img');
-  img.src = data.filename;
-  img.setAttribute("id", "img_"+data.code);
-  img.setAttribute("class", "field-image-src");
-	img.setAttribute("onload", "drawFields()");
-  //img.setAttribute("onclick", "onFieldClick(event)");
-  img.setAttribute("hidden", "");
-  cell.appendChild(img);
-}
+	var row = table.insertRow(idx);
+	idx += 1
+	var cell = row.insertCell(0);
+	cell.setAttribute("colspan", 2);
+	cell.setAttribute("style", "text-align: center;");
+	cell.innerHTML = name;
+	  
+	row = table.insertRow(idx); 
+	idx += 1;
+	cell = row.insertCell(0);
+	cell.setAttribute("colspan", 2);
+	cell.setAttribute("style", "text-align: center;");
+	var undoButton = document.createElement("button");
+	undoButton.setAttribute("type", "checkbox");
+	undoButton.setAttribute("onclick", "undo(this.parentElement)");
+	undoButton.innerHTML += "Undo";
+	undoButton.setAttribute("id", "undo_"+data.code);
+	cell.appendChild(undoButton);
+  
+	row = table.insertRow(idx);
+	idx += 1;
+	cell = row.insertCell(0);
+	cell.setAttribute("colspan", 2);
+	cell.setAttribute("style", "text-align: center;");
+	var canvas = document.createElement('canvas');
+	//canvas.onclick = onFieldClick;
+	canvas.setAttribute("onclick", "onFieldClick(event)");
+	canvas.setAttribute("class", "field-image-src");
+	canvas.setAttribute("id", "canvas_"+data.code);
+	canvas.innerHTML = "No canvas support";
+	cell.appendChild(canvas);
+  
+	row = table.insertRow(idx);
+	idx += 1
+	row.setAttribute("style", "display:none");
+	cell = row.insertCell(0);
+	cell.setAttribute("colspan", 2);
+	var inp = document.createElement('input');
+	inp.setAttribute("type", "hidden");
+	inp.setAttribute("id", "XY_"+data.code);
+	inp.setAttribute("value", "");
+	cell.appendChild(inp);
+	inp = document.createElement('input');
+	inp.setAttribute("hidden", "");
+	inp.setAttribute("id", "input_"+data.code);
+	inp.setAttribute("value", "");
+	cell.appendChild(inp);
+  
+	row = table.insertRow(idx);
+	row.setAttribute("style", "display:none");
+	idx += 1
+	//row.setAttribute("style", "display:none");
+	cell = row.insertCell(0);
+	cell.setAttribute("colspan", 2);
+	var img = document.createElement('img');
+	img.src = data.filename;
+	img.setAttribute("id", "img_"+data.code);
+	img.setAttribute("class", "field-image-src");
+	  img.setAttribute("onload", "drawFields()");
+	//img.setAttribute("onclick", "onFieldClick(event)");
+	img.setAttribute("hidden", "");
+	cell.appendChild(img);
+  }
 
 function addText(table, idx, name, data) {
   var row = table.insertRow(idx);
@@ -253,7 +265,7 @@ function addCheckbox(table, idx, name, data){
   cell2.appendChild(inp);
 
   if (data.type == 'bool') {
-    cell2.innerHTML += "(checked = Yes)";
+    cell2.innerHTML += "(‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ (‎Checked → Yes)";
   }
 
   return idx+1;
@@ -804,6 +816,24 @@ function counter(element, step)
 				ctr.value = 0;
 		}
 }
+
+function undo(event)
+{
+   let undoID = event.firstChild;
+   //Getting rid of last value
+   changingXY = document.getElementById("XY" + getIdBase(undoID.id));
+   changingInput = document.getElementById("input" + getIdBase(undoID.id));
+   var tempValue = Array.from(JSON.parse(changingXY.value));
+   tempValue.pop();
+   changingXY.value = JSON.stringify(tempValue);
+
+   tempValue = Array.from(JSON.parse(changingInput.value));
+   tempValue.pop();
+   changingInput.value = JSON.stringify(tempValue);
+   drawFields();
+    
+}
+
 
 window.onload = function(){
 	configure();

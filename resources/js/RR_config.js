@@ -4,7 +4,7 @@ var config_data = `
   "page_title":"Rapid React",
   "elements":{
     "prematch": {
-      "Scouter's Initials": {
+      "Scouter's Identity": {
         "code":"s",
         "type":"scouter",
         "size":30,
@@ -14,7 +14,7 @@ var config_data = `
       "Event":{
         "code":"e",
         "type":"event",
-        "defaultValue":"2022 Izmir Regional",
+        "defaultValue":"2022 İzmir Regional",
         "required":"true",
         "disabled":"true"
       },
@@ -22,11 +22,11 @@ var config_data = `
         "code":"l",
         "type":"level",
         "choices":{
-          "qm":"Quals<br>",
-          "ef":"Eighth-Final<br>",
-          "qf":"Quarter-Final<br>",
-          "sf":"Semi-Final<br>",
-          "f":"Final"
+          "qm":"‎‏‏‎ ‎‏‏‎Quals<br>",
+          "ef":"‎‏‏‎ ‎‏‏‎Eighth-Final<br>",
+          "qf":"‎‏‏‎ ‎‏‏‎Quarter-Final<br>",
+          "sf":"‎‏‏‎ ‎‏‏‎Semi-Final<br>",
+          "f":"‎‏‏‎ ‎‏‏‎Final"
         },
         "defaultValue":"qm",
         "required":"true"
@@ -42,12 +42,12 @@ var config_data = `
         "code":"r",
         "type":"robot",
         "choices":{
-          "r1":"  Red-1",
-          "b1":"  Blue-1<br>",
-          "r2":"  Red-2",
-          "b2":"  Blue-2<br>",
-          "r3":"  Red-3",
-          "b3":"  Blue-3"
+          "r1":"   Red-1‎‏‏‎ ‎‏‏‎",
+          "b1":"  ‎‏‏‎ ‎‏‏‎Blue-1<br>",
+          "r2":"   Red-2‎‏‏‎ ‎‏‏‎",
+          "b2":" ‎‏‏‎ ‎‏‏‎Blue-2<br>",
+          "r3":"   Red-3‎‏‏‎ ‎‏‏‎",
+          "b3":"  ‎‏‏‎ ‎‏‏‎Blue-3"
         },
         "required":"true"
       },

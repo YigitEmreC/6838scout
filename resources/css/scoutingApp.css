@@ -4,7 +4,8 @@
     font-weight: normal;
     src: local('Alexis'), url('../fonts/alex.woff') format('woff');
     src: url("../fonts/alexisv3.ttf") format('truetype');
-}
+} 
+
 
 html, body{
     height: 100%;
@@ -380,4 +381,62 @@ ul li {
 	 
 	text-decoration:none
 	 
+}
+
+input[type=checkbox] {
+         position: relative;
+	       cursor: pointer;
+    }
+    input[type=checkbox]:before {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 0;
+         left: 0;
+         border: 2px solid #555555;
+         border-radius: 3px;
+         background-color: white;
+}
+    input[type=checkbox]:checked:after {
+         content: "";
+         display: block;
+         width: 5px;
+         height: 10px;
+         border: solid rgb(59, 219, 247);
+         border-width: 0 2px 2px 0;
+         -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         transform: rotate(45deg);
+         position: absolute;
+         top: 2px;
+         left: 6px;
+}
+input[type='radio']:after {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #ffffff;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: rgb(59, 219, 247);
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid white;
 }
