@@ -22,13 +22,14 @@ var config_data = `
         "code":"l",
         "type":"level",
         "choices":{
+          "pr":"‎‏‏‎ ‎‏‏‎Practice Match<br>",
           "qm":"‎‏‏‎ ‎‏‏‎Quals<br>",
           "ef":"‎‏‏‎ ‎‏‏‎Eighth-Final<br>",
           "qf":"‎‏‏‎ ‎‏‏‎Quarter-Final<br>",
           "sf":"‎‏‏‎ ‎‏‏‎Semi-Final<br>",
           "f":"‎‏‏‎ ‎‏‏‎Final"
         },
-        "defaultValue":"qm",
+        "defaultValue":"pr",
         "required":"true"
       },
       "Match":{
@@ -51,12 +52,20 @@ var config_data = `
         },
         "required":"true"
       },
-      "Team Tag #": {
+      "Team Tag ": {
         "code":"t",
         "type":"team",
         "min":1,
         "max":99999
       },
+      "Team Name": {
+        "code":"tn",
+        "type":"teamn",
+        "size":18,
+        "maxSize":25,
+        "required":"true"
+      },
+
       "Auto Start Position": {
         "code":"as",
         "title": "Auto Start Position",

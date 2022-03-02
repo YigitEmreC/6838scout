@@ -16,7 +16,7 @@ var options = {
 
 // Must be filled in: e=event, m=match#, l=level(q,qf,sf,f), t=team#, r=robot(r1,r2,b1..), s=scouter
 //var requiredFields = ["e", "m", "l", "t", "r", "s", "as"];
-var requiredFields = ["e", "m", "l", "r", "s", "as"];
+var requiredFields = ["e", "m", "l", "r", "s", "as", "tn"];
 
 function addCounter(table, idx, name, data){
   var row = table.insertRow(idx);
@@ -284,6 +284,7 @@ function addElement(table, idx, name, data){
   if (type == 'counter') {
     idx = addCounter(table, idx, name, data);
   } else if ((data.type == 'scouter') ||
+  			 (data.type == 'teamn') ||
              (data.type == 'event') ||
              (data.type == 'text')
            )
@@ -436,7 +437,9 @@ function resetRobot() {
 
 
 function getLevel(){
-	if(document.getElementById("input_l_qm").checked){
+	if(document.getElementById("input_l_pr").checked){
+		return "pr";
+    } else if(document.getElementById("input_l_qm").checked){
 		return "qm";
 	} else if(document.getElementById("input_l_ef").checked){
 		return "ef";
@@ -452,7 +455,8 @@ function getLevel(){
 }
 
 function validateLevel() {
-	if (document.getElementById("input_l_qm").checked ||
+	if (document.getElementById("input_l_pr").checked ||
+		document.getElementById("input_l_qm").checked ||
 		document.getElementById("input_l_ef").checked ||
 		document.getElementById("input_l_qf").checked ||
 		document.getElementById("input_l_sf").checked ||
@@ -545,7 +549,7 @@ function updateQRHeader() {
 
 
 function qr_regenerate() {
-	// Validate required pre-match date (event, match, level, robot, scouter)
+	// Validate required pre-match date (event, match, level, robot, scouter, team name "teamn")
 	if (validateData() == false) {
 		// Don't allow a swipe until all required data is filled in
 		return false
@@ -599,6 +603,8 @@ function clearForm() {
 		if (code.substring(0,2) == "l_") continue
 		if (code == "e") continue
 		if (code == "s") continue
+		if (code == "tn") continue
+
 
 
 		radio = code.indexOf("_")
