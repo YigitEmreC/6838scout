@@ -29,7 +29,7 @@ var config_data = `
           "sf":"‎‏‏‎ ‎‏‏‎Semi-Final<br>",
           "f":"‎‏‏‎ ‎‏‏‎Final"
         },
-        "defaultValue":"pr",
+        "defaultValue":"qm",
         "required":"true"
       },
       "Match":{
