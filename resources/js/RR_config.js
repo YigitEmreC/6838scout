@@ -211,7 +211,7 @@ var config_data = `
         "title": "Comments",
         "type":"text",
         "size":50,
-        "maxSize":50
+        "maxSize":300
       }
     }
   }
