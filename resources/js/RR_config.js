@@ -196,8 +196,8 @@ var config_data = `
         "title": "Died",
         "type":"bool"
       },
-      "Tipped": {
-        "code":"to",
+      "AFK for While": {
+        "code":"to", 
         "title": "Tipped Over",
         "type":"bool"
       },
