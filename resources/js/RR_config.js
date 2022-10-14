@@ -14,7 +14,7 @@ var config_data = `
       "Event":{
         "code":"e",
         "type":"event",
-        "defaultValue":"Bosphorus Regional 2022",
+        "defaultValue":"Pendik Off-Season 2022",
         "required":"true",
         "disabled":"true"
       },
